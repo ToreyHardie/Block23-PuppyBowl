@@ -1,35 +1,50 @@
-*{
+body{
+  display: flex;
   padding: 0;
+  flex-direction: column;
   margin: 0;
   box-sizing: border-box;
+  background-image: url(/images/Football.png);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/*
-#party-container {
-  display: flex;
+
+.container{
+  display: inline-flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 20px;
-}
-
-
-.party {
-  border: 1px solid #ccc;
   padding: 10px;
-  margin: 10px;
-  width: 300px;
+}
+
+.player-card {
+background-color: white;
+width: 200px;
+height: 100%;
+margin: 10px;
+padding: 10px;
+border: 2px solid black;
+text-align: center;
+border-radius: 10px;
+}
+
+.player-image {
+border: 2px solid black;
+max-width: 90%;
+height: auto;
+margin-bottom: 15px;
+border-radius: 10px;
+
+}
+
+.Title{
+text-align: center;
+padding: 10px;
+font-size: 20px;
+}
+
+#new-player-form{
   text-align: center;
-  background-color: #f9f9f9;
+  padding: 10px;
 }
-
-.details-button, .delete-button {
-  margin: 5px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px; 
-}
-
-*/
