@@ -143,12 +143,8 @@ const renderAllPlayers = (playerList) => {
 
 const renderNewPlayerForm = () => {
     try {
-        console.log('Rendering new player form');
         const newPlayerFormContainer = document.getElementById('new-player-container');
-        const newPlayerForm = document.getElementById('add-player-form');
-
-        let newPlayerContainerHTML = "";
-        newPlayerContainerHTML += `
+        let newPlayerContainerHTML = `
             <div id="new-player-form">
                 <form id="add-player-form">
                     <label for="puppyName">Puppy Name:</label>
@@ -157,15 +153,16 @@ const renderNewPlayerForm = () => {
                     <label for="puppyBreed">Puppy Breed:</label>
                     <input type="text" id="puppyBreed" name="puppyBreed" required>
 
-                    <button type="submit">Add Player</button>
+                    <button type="submit" id="add-player-button">Add Player</button>
                 </form>
             </div>`;
 
         newPlayerFormContainer.innerHTML = newPlayerContainerHTML;
 
+        const newPlayerForm = document.getElementById('add-player-form');
+
         newPlayerForm.addEventListener('submit', async (event) => {
             event.preventDefault();
-            console.log('Form Submitted');
             const puppyName = document.getElementById('puppyName').value;
             const puppyBreed = document.getElementById('puppyBreed').value;
 
